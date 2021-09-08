@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cat /etc/grid-security/certificates/*.pem >> "$(python -m requests.certs)"
+
 . /etc/cloud-info-provider/openstack.rc
 
 GOCDB_SERVICE_TYPE=org.openstack.nova

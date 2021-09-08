@@ -1,8 +1,10 @@
 FROM centos:7
-MAINTAINER Enol Fernandez <enol.fernandez@egi.eu>
 
-RUN yum install -y centos-release-openstack-stein vim
+## Train seems to be latest OpenStack version supported by CentOS7.
+## Hope it works for Wallaby
+RUN yum install -y centos-release-openstack-train
 # moved to different location as repos are not fully functional
+## Is cloudkeeper ported to centos8??
 RUN curl http://appdb.egi.eu:9009/api/repofiles/index.php?id=1141 > /etc/yum.repos.d/cloudkeeper.repo
 RUN yum install -y cloudkeeper-os
 
@@ -16,6 +18,7 @@ COPY mapping.json /etc/cloudkeeper-os/mapping.json
 COPY openstack_client.py /usr/lib/python2.7/site-packages/cloudkeeper_os/openstack_client.py
 RUN python -m compileall  /usr/lib/python2.7/site-packages/cloudkeeper_os/openstack_client.py
 
-EXPOSE 50051
+## Will be run with network=host
+#EXPOSE 50051
 
 CMD ["cloudkeeper-os"]
