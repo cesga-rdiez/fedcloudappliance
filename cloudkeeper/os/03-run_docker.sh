@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 
-DOCKNAME="fedcloud-os-cloudkeeper-core"
+DOCKNAME="fedcloud-os-cloudkeeper-os"
 
 if [ -z $1 ]; then
         IMAGE="${DOCKNAME}"

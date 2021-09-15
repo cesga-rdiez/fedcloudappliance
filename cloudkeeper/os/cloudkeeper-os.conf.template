@@ -121,16 +121,17 @@
 #
 
 # Username (string value)
-#username = cloudkeeper
+username = ${USERNAME}
 
 # User's password (string value)
-#password = <None>
+password = ${PASSWORD}
 
 # User's domain name (string value)
-#user_domain_name = default
+user_domain_name = ${USER_DOMAIN_NAME}
 
 # Domain name containing project (string value)
-#project_domain_name = default
+project_domain_name = ${PROJECT_DOMAIN_NAME}
 
 # Complete public Identity API endpoint. (string value)
-#auth_url = <None>
+auth_url = ${AUTH_URL}
+

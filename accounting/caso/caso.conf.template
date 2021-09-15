@@ -9,7 +9,7 @@ messengers = ssmv4
 
 # Site name as in GOCDB. (string value)
 # FedCloud Appliance: Change this value!
-site_name = SITE-NAME
+site_name = ${SITENAME}
 
 # Optional:
 # Service name within the site (string value)
@@ -17,7 +17,7 @@ site_name = SITE-NAME
 
 # List of projects to extract accounting records from. (list value)
 # Deprecated group/name - [DEFAULT]/tenants
-projects = demo
+projects = ${PROJECTS}
 
 [keystone_auth]
 
@@ -29,22 +29,22 @@ projects = demo
 auth_type = v3password
 
 # Authentication URL (string value)
-auth_url = https://yourkeystone/v3
+auth_url = ${AUTH_URL}
 
 # Project name to scope to (string value)
 #project_name = <None>
 
 # Domain name containing project (string value)
-#project_domain_name = <None>
+project_domain_name = ${PROJECT_DOMAIN_NAME}
 
 # Username (string value)
-#username = <None>
+username = ${USERNAME}
 
 # User's domain name (string value)
-#user_domain_name = <None>
+user_domain_name = ${USER_DOMAIN_NAME}
 
 # User's password (string value)
-#password = <None>
+password = ${PASSWORD}
 
 # User's domain id (string value)
 #user_domain_id = <None>

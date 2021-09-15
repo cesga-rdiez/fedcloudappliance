@@ -10,8 +10,9 @@ RUN pip install --no-cache-dir \
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 COPY cloud-info-provider /usr/local/bin/cloud-info-provider
-COPY openstack.rc /etc/cloud-info-provider/openstack.rc
-COPY openstack.yaml /etc/cloud-info-provider/openstack.yaml
+COPY openstack.rc.generated /etc/cloud-info-provider/openstack.rc
+COPY openstack.yaml.generated /etc/cloud-info-provider/openstack.yaml
 RUN chmod +x /usr/local/bin/cloud-info-provider
 
 CMD ["/usr/local/bin/cloud-info-provider"]
+

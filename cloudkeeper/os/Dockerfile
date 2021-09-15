@@ -11,8 +11,8 @@ RUN yum install -y cloudkeeper-os
 RUN mkdir -p /etc/cloudkeeper-os/ \
              /var/spool/cloudkeeper/images
 
-COPY cloudkeeper-os.conf /etc/cloudkeeper-os/cloudkeeper-os.conf
-COPY mapping.json /etc/cloudkeeper-os/mapping.json
+COPY cloudkeeper-os.conf.generated /etc/cloudkeeper-os/cloudkeeper-os.conf
+COPY mapping.json.generated /etc/cloudkeeper-os/mapping.json
 
 # Patch the cloudkeeper-os
 COPY openstack_client.py /usr/lib/python2.7/site-packages/cloudkeeper_os/openstack_client.py
