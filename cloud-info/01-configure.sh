@@ -6,7 +6,7 @@ envsubst < openstack.rc.template > openstack.rc.generated
 
 
 echo "site:" >openstack.yaml.generated
-printf "\tname: %s\n\n" $SITENAME >>openstack.yaml.generated
+printf "        name: %s\n\n" $SITENAME >>openstack.yaml.generated
 echo "compute:" >>openstack.yaml.generated
 echo "    # Configure here the VOs supported at your installation" >>openstack.yaml.generated
 echo "    shares:" >>openstack.yaml.generated
