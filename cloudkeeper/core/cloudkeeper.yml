@@ -24,7 +24,7 @@ cloudkeeper:
       ssl: false # Whether proxy will use SSL connection
   backend:
     endpoint: 127.0.0.1:50051 # Backend's gRPC endpoint
-    certificate: /etc/grid-security/backendcert.pem # Backend's certificate
+    certificate: /etc/grid-security/hostcert.pem # Backend's certificate
   formats: # List of acceptable formats images can be converted to
     - qcow2
   logging:
