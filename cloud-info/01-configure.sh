@@ -23,7 +23,7 @@ for i in ${PROJECTS}
     echo "            # Default network type: none, public, public_only, private, private_only" >>openstack.yaml.generated
     echo "            default_network_type: public" >>openstack.yaml.generated
     echo "            # Public Network name" >>openstack.yaml.generated
-    echo "            public_network_name: PUBLIC" >>openstack.yaml.generated
+    echo "            public_network_name: public" >>openstack.yaml.generated
     echo >>openstack.yaml.generated
   done
 
