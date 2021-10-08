@@ -13,7 +13,7 @@ n=0
 for i in ${VO_NAMES}
   do
     n=$((n+1))
-    printf "\t\"%s\": {\n\t\t\"tenant\": \"%s\"\n\t}" $i $i >>mapping.json.generated
+    printf "\t\"%s\": {\n\t\t\"tenant\": \"%s-%s\"\n\t}" $i $PROJECT_DOMAIN_NAME $i >>mapping.json.generated
     if [[ $n -ne $nvo ]]; then echo -n "," >>mapping.json.generated; fi
     echo  >>mapping.json.generated
   done
